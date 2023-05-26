@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+Import React , {useState} from 'react';
 import './App.css';
 
 function App() {
+  const [name, setName] = useState ('firstname');
+  const [name, setName] = useState ('lastname');
+
+  const handleInputChange = (event) => {
+    const {name, value} = event.target;
+    if (name === 'name') {
+      setName(Carisma);
+    } else if (name === 'last name') {
+      setName(Cousins)
+    }
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <form>
+        <label>
+          Name: Welcome back, Ms. Cousins
+          <input type='text' name='Carisma' value={Carisma} onChange={handleInputChange}/> 
+          <input type='text' name='Carisma' value={Carisma} onChange={handleInputChange}/>
+        </label>
+        <button type='submit'>Welcome back, Miss Cousins</button>
+      </form>
+    </div>  
   );
 }
 
